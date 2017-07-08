@@ -1,0 +1,995 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\dat\en_msgs.txt \
+  -cs -h+dist/default/production\wwvb2.production.sym -z -Q18F2420 -ol.obj \
+  -Mdist/default/production/wwvb2.production.map -E1 -ACODE=00h-03FFFh \
+  -ACONST=00h-03FFFh -ASMALLCONST=0300h-03FFhx61 -AMEDIUMCONST=0300h-03FFFh \
+  -ARAM=00h-0FFhx2,0200h-027Fh -ABIGRAM=00h-027Fh -ACOMRAM=00h-07Fh \
+  -AABS1=00h-027Fh -ABANK0=00h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-027Fh \
+  -ANVRAM=0200h-027Fh \
+  -preset_vec=00h,intcode=08h,intcodelo,powerup,init,end_init \
+  -pramtop=0300h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -pparam1=BANK1 -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh \
+  -pconfig=CONFIG -AIDLOC=0200000h-0200007h -pidloc=IDLOC \
+  -AEEDATA=0F00000h-0F000FFh -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\joe\AppData\Local\Temp\s3f8.obj \
+  dist/default/production\wwvb2.production.obj 
+
+Object code version is 3.10
+
+Machine type is 18F2420
+
+Call graph: (short form)
+
+*_main size 0,8 offset 0
+     _rtcInit size 0,10 offset 8
+         _spiInit size 0,0 offset 18
+         _rtcWriteRam size 2,0 offset 53
+             _spiChipSelect size 0,0 offset 55
+                 _DelayShort size 0,0 offset 75
+             _spiWrite size 1,2 offset 55
+                 _DelayShort size 0,0 offset 75
+             _spiChipDeselect size 0,0 offset 55
+                 _DelayShort size 0,0 offset 75
+         _rtcReadRam size 1,1 offset 53
+             _spiChipSelect size 0,0 offset 55
+             _spiWrite size 1,2 offset 55
+             _spiRead size 0,3 offset 55
+                 _DelayShort size 0,0 offset 75
+             _spiChipDeselect size 0,0 offset 55
+         _rtcSetClock size 2,1 offset 18
+             _rtcWriteRam size 2,0 offset 53
+         _rtcSaveLastSync size 3,1 offset 48
+             _rtcWriteRam size 2,0 offset 53
+     _glcdInit size 0,3 offset 8
+         _glbaseInit size 0,0 offset 11
+             _Vdelay_ms size 2,4 offset 12
+                 ___wmul size 4,2 offset 83
+         _glbaseWriteData size 3,0 offset 70
+             _glbaseWaitForNonBusy size 1,1 offset 73
+                 _glbaseEnableController size 1,0 offset 75
+                 _DelayShort size 0,0 offset 75
+                 _glbaseDisableController size 1,0 offset 75
+             _glbaseEnableController size 1,0 offset 75
+             _DelayShort size 0,0 offset 75
+             _glbaseDisableController size 1,0 offset 75
+     _wwvInit size 0,0 offset 8
+     _glcdClearScreen size 0,5 offset 48
+         _glcdSetPage size 2,1 offset 67
+             _glbaseWaitForNonBusy size 1,1 offset 73
+             _glbaseWriteData size 3,0 offset 70
+         _glcdSetCol size 2,1 offset 67
+             _glbaseWaitForNonBusy size 1,1 offset 73
+             _glbaseWriteData size 3,0 offset 70
+         _glbaseWriteData size 3,0 offset 70
+     _rtcGetClock size 2,1 offset 8
+         _spiChipSelect size 0,0 offset 55
+         _spiWrite size 1,2 offset 55
+         _spiRead size 0,3 offset 55
+         _spiChipDeselect size 0,0 offset 55
+     _DisplayTime size 3,41 offset 8
+         _glcdMoveTo size 2,0 offset 52
+             _glcdSetCol size 2,1 offset 67
+             _glcdSetPage size 2,1 offset 67
+         _glcdDrawImage size 1,5 offset 52
+             _glcdDrawBitmap size 4,5 offset 58
+                 _glcdSetPage size 2,1 offset 67
+                 _glcdSetCol size 2,1 offset 67
+                 _glbaseWriteData size 3,0 offset 70
+         _rtc24to12Hour size 3,3 offset 52
+             _rtcBCDToDec size 1,2 offset 67
+             _rtcDecToBCD size 1,2 offset 67
+                 ___awmod size 4,3 offset 83
+                 ___awdiv size 4,5 offset 83
+         ___wmul size 4,2 offset 83
+         _strcpy size 4,2 offset 67
+         _glcdWriteString size 2,0 offset 52
+             _glcdWriteChar size 1,6 offset 54
+                 _glbaseWriteData size 3,0 offset 70
+                 _glcdSetCol size 2,1 offset 67
+                 _glcdSetPage size 2,1 offset 67
+         _MakeDateString size 4,11 offset 52
+             _rtcBCDToDec size 1,2 offset 67
+             ___wmul size 4,2 offset 83
+             _strcpy size 4,2 offset 67
+             _strcat size 4,2 offset 67
+         _rtcReadRam size 1,1 offset 53
+     _memcpy size 6,4 offset 8
+     _rtcBCDToDec size 1,2 offset 67
+*    _wwvGetTime size 2,38 offset 8
+         _glcdClearScreen size 0,5 offset 48
+         _glcdMoveTo size 2,0 offset 52
+         _glcdWriteString size 2,0 offset 52
+         _rtcReadRam size 1,1 offset 53
+         _glcdMakeLastSyncString size 6,3 offset 48
+         _wwvStartFrameTimer size 0,0 offset 48
+         _wwvGetSyncBit size 0,0 offset 48
+             _wwvGetBit size 0,8 offset 53
+         _glcdWriteChar size 1,6 offset 54
+         _wwvRead8BitFrame size 2,3 offset 48
+             _wwvGetBit size 0,8 offset 53
+         _wwvGetAnyBit size 0,0 offset 48
+             _wwvGetBit size 0,8 offset 53
+         _rtcBCDToDec size 1,2 offset 67
+         _rtcWriteRam size 2,0 offset 53
+*        _wwvMakeTimeStruct size 10,9 offset 48
+             ___awmod size 4,3 offset 83
+             _rtcDecToBCD size 1,2 offset 67
+*            _wwvGetWeekDay size 6,10 offset 67
+*                ___awdiv size 4,5 offset 83
+                 ___wmul size 4,2 offset 83
+                 ___awmod size 4,3 offset 83
+         _rtcBumpLastSync size 0,5 offset 48
+             _rtcReadRam size 1,1 offset 53
+             _rtcWriteRam size 2,0 offset 53
+         _rtcSaveLastSync size 3,1 offset 48
+     _rtcSetClock size 2,1 offset 18
+     _ButtonDown size 0,4 offset 8
+         _Vdelay_ms size 2,4 offset 12
+         _glcdClearScreen size 0,5 offset 48
+         _glcdMoveTo size 2,0 offset 52
+         _glcdWriteString size 2,0 offset 52
+         _rtcReadRam size 1,1 offset 53
+         _DrawTZSetting size 1,3 offset 12
+             _glcdMoveTo size 2,0 offset 52
+             _glcdWriteString size 2,0 offset 52
+         _rtcWriteRam size 2,0 offset 53
+
+Estimated maximum call depth: 4
+
+*intlevel2 size 0,0 offset 92
+*    _GlobalInt size 0,14 offset 92
+
+Estimated maximum call depth: 1
+
+
+                Name          Link     Load   Length Selector Space Scale
+C:\Users\joe\AppData\Local\Temp\s3f8.obj
+                reset_vec        0        0        4       0     0
+                init            18       18        C       4     0
+                end_init        24       24       16       4     0
+                config      300000   300000        A  300000     0
+dist/default/production\wwvb2.production.obj
+                intcode          8        8       10       4     0
+                mediumcon     39F2     39F2      60E    1CF9     0
+                text37        3238     3238       70       4     0
+                text36        2866     2866      12A       4     0
+                text35        366A     366A       30       4     0
+                text38        3776     3776        8       4     0
+                text41        2494     2494      15A       4     0
+                text40        2734     2734      132       4     0
+                text39        3152     3152       74       4     0
+                text30        30D4     30D4       7E       4     0
+                text29        32A8     32A8       70       4     0
+                text28        3752     3752       1A       4     0
+                text31        33D6     33D6       5A       4     0
+                text34        36CA     36CA       26       4     0
+                text33        1FC4     1FC4      1BC       4     0
+                text32        34D2     34D2       4C       4     0
+                text42        377E     377E        8       4     0
+                text52        2F8A     2F8A       A6       4     0
+                text51        3786     3786        4       4     0
+                text50        36F0     36F0       24       4     0
+                text45        369A     369A       30       4     0
+                text44        2990     2990      12A       4     0
+                text43        3318     3318       60       4     0
+                text46        363A     363A       30       4     0
+                text49        3714     3714       24       4     0
+                text48        3562     3562       3E       4     0
+                text47        351E     351E       44       4     0
+                text8         1DE4     1DE4      1E0       4     0
+                text7         3378     3378       5E       4     0
+                text6           3A       3A      82E       4     0
+                text9         376C     376C        A       4     0
+                text12        1156     1156      332       4     0
+                text11        3738     3738       1A       4     0
+                text10        171E     171E      274       4     0
+                text1         2C98     2C98       C8       4     0
+                text0         1BC4     1BC4      220       4     0
+                text2         360A     360A       30       4     0
+                text5         1488     1488      296       4     0
+                text4          868      868      56E       4     0
+                text3         3030     3030       A4       4     0
+                text13        2E1C     2E1C       BA       4     0
+                text23        2180     2180      19A       4     0
+                text22        25EE     25EE      146       4     0
+                text21        2ABA     2ABA      114       4     0
+                text24        35D6     35D6       34       4     0
+                text27        31C6     31C6       72       4     0
+                text26        231A     231A      17A       4     0
+                text25        3430     3430       54       4     0
+                text16        2BCE     2BCE       CA       4     0
+                text15         DD6      DD6      380       4     0
+                text14        1992     1992      232       4     0
+                text17        2D60     2D60       BC       4     0
+                text20        35A0     35A0       36       4     0
+                text19        2ED6     2ED6       B4       4     0
+                text18        3484     3484       4E       4     0
+
+COMMON          param1         100      100       6A     100     1
+
+TOTAL           Name          Link     Load   Length  Space
+        CLASS   CODE           
+                intcode          8        8       10     0
+                reset_vec        0        0        4     0
+                init            18       18        C     0
+                end_init        24       24       16     0
+                text37        3238     3238       70     0
+                text36        2866     2866      12A     0
+                text35        366A     366A       30     0
+                text38        3776     3776        8     0
+                text41        2494     2494      15A     0
+                text40        2734     2734      132     0
+                text39        3152     3152       74     0
+                text30        30D4     30D4       7E     0
+                text29        32A8     32A8       70     0
+                text28        3752     3752       1A     0
+                text31        33D6     33D6       5A     0
+                text34        36CA     36CA       26     0
+                text33        1FC4     1FC4      1BC     0
+                text32        34D2     34D2       4C     0
+                text42        377E     377E        8     0
+                text52        2F8A     2F8A       A6     0
+                text51        3786     3786        4     0
+                text50        36F0     36F0       24     0
+                text45        369A     369A       30     0
+                text44        2990     2990      12A     0
+                text43        3318     3318       60     0
+                text46        363A     363A       30     0
+                text49        3714     3714       24     0
+                text48        3562     3562       3E     0
+                text47        351E     351E       44     0
+                text8         1DE4     1DE4      1E0     0
+                text7         3378     3378       5E     0
+                text6           3A       3A      82E     0
+                text9         376C     376C        A     0
+                text12        1156     1156      332     0
+                text11        3738     3738       1A     0
+                text10        171E     171E      274     0
+                text1         2C98     2C98       C8     0
+                text0         1BC4     1BC4      220     0
+                text2         360A     360A       30     0
+                text5         1488     1488      296     0
+                text4          868      868      56E     0
+                text3         3030     3030       A4     0
+                text13        2E1C     2E1C       BA     0
+                text23        2180     2180      19A     0
+                text22        25EE     25EE      146     0
+                text21        2ABA     2ABA      114     0
+                text24        35D6     35D6       34     0
+                text27        31C6     31C6       72     0
+                text26        231A     231A      17A     0
+                text25        3430     3430       54     0
+                text16        2BCE     2BCE       CA     0
+                text15         DD6      DD6      380     0
+                text14        1992     1992      232     0
+                text17        2D60     2D60       BC     0
+                text20        35A0     35A0       36     0
+                text19        2ED6     2ED6       B4     0
+                text18        3484     3484       4E     0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+                mediumcon     39F2     39F2      60E     0
+
+        CLASS   RAM            
+
+        CLASS   BIGRAM         
+
+        CLASS   COMRAM         
+
+        CLASS   ABS1           
+                abs_s1           0        0        E     1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+                param1         100      100       6A     1
+
+        CLASS   BANK2          
+
+        CLASS   NVRAM          
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config      300000   300000        A     0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name           Load    Length   Top     Selector    Space Class
+
+                reset_vec       000000  000004  000004         0       0  CODE    
+                intcode         000008  003782  00378A         4       0  CODE    
+                param1          000100  00006A  00016A       100       1  BANK1   
+                mediumconst     0039F2  00060E  004000      1CF9       0  MEDIUMCO
+                config          300000  00000A  30000A    300000       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+        BANK0            00000E-0000FF
+        BANK1            00016A-0001FF
+        BANK2            000200-00027F
+        BIGRAM           00000E-0000FF
+                         00016A-00027F
+        CODE             000004-000007
+                         00378A-0039F1
+        COMRAM           00000E-00007F
+        CONFIG           30000A-30000D
+        CONST            000004-000007
+                         00378A-0039F1
+        EEDATA           F00000-F000FF
+        IDLOC            200000-200007
+        MEDIUMCONST      00378A-0039F1
+        NVRAM            000200-00027F
+        RAM              00000E-0000FF
+                         00016A-00027F
+        SMALLCONST       00378A-0039F1
+
+                                  Symbol Table
+
+??_ButtonDown                    param1       000108
+??_DelayShort                    param1       00014B
+??_DisplayTime                   param1       00010B
+??_DrawTZSetting                 param1       00010D
+??_GlobalInt                     param1       00015C
+??_MakeDateString                param1       000138
+??_Vdelay_ms                     param1       00010E
+??___awdiv                       param1       000157
+??___awmod                       param1       000157
+??___wmul                        param1       000157
+??_glbaseDisableController       param1       00014C
+??_glbaseEnableController        param1       00014C
+??_glbaseInit                    param1       00010B
+??_glbaseWaitForNonBusy          param1       00014A
+??_glbaseWriteData               param1       000149
+??_glcdClearScreen               param1       000130
+??_glcdDrawBitmap                param1       00013E
+??_glcdDrawImage                 param1       000135
+??_glcdInit                      param1       000108
+??_glcdMakeLastSyncString        param1       000136
+??_glcdMoveTo                    param1       000136
+??_glcdSetCol                    param1       000145
+??_glcdSetPage                   param1       000145
+??_glcdWriteChar                 param1       000137
+??_glcdWriteString               param1       000136
+??_main                          param1       000100
+??_memcpy                        param1       00010E
+??_rtc24to12Hour                 param1       000137
+??_rtcBCDToDec                   param1       000144
+??_rtcBumpLastSync               param1       000130
+??_rtcDecToBCD                   param1       000144
+??_rtcGetClock                   param1       00010A
+??_rtcInit                       param1       000108
+??_rtcReadRam                    param1       000136
+??_rtcSaveLastSync               param1       000133
+??_rtcSetClock                   param1       000114
+??_rtcWriteRam                   param1       000137
+??_spiChipDeselect               param1       000137
+??_spiChipSelect                 param1       000137
+??_spiInit                       param1       000112
+??_spiRead                       param1       000137
+??_spiWrite                      param1       000138
+??_strcat                        param1       000147
+??_strcpy                        param1       000147
+??_wwvGetAnyBit                  param1       000130
+??_wwvGetBit                     param1       000135
+??_wwvGetSyncBit                 param1       000130
+??_wwvGetTime                    param1       00010A
+??_wwvGetWeekDay                 param1       000149
+??_wwvInit                       param1       000108
+??_wwvMakeTimeStruct             param1       00013A
+??_wwvRead8BitFrame              param1       000132
+??_wwvStartFrameTimer            param1       000130
+?_ButtonDown                     param1       000108
+?_DelayShort                     param1       00014B
+?_DisplayTime                    param1       000108
+?_DrawTZSetting                  param1       00010C
+?_GlobalInt                      param1       00015C
+?_MakeDateString                 param1       000134
+?_Vdelay_ms                      param1       00010C
+?___awdiv                        param1       000153
+?___awmod                        param1       000153
+?___wmul                         param1       000153
+?_glbaseDisableController        param1       00014B
+?_glbaseEnableController         param1       00014B
+?_glbaseInit                     param1       00010B
+?_glbaseWaitForNonBusy           param1       000149
+?_glbaseWriteData                param1       000146
+?_glcdClearScreen                param1       000130
+?_glcdDrawBitmap                 param1       00013A
+?_glcdDrawImage                  param1       000134
+?_glcdInit                       param1       000108
+?_glcdMakeLastSyncString         param1       000130
+?_glcdMoveTo                     param1       000134
+?_glcdSetCol                     param1       000143
+?_glcdSetPage                    param1       000143
+?_glcdWriteChar                  param1       000136
+?_glcdWriteString                param1       000134
+?_main                           param1       000100
+?_memcpy                         param1       000108
+?_rtc24to12Hour                  param1       000134
+?_rtcBCDToDec                    param1       000143
+?_rtcBumpLastSync                param1       000130
+?_rtcDecToBCD                    param1       000143
+?_rtcGetClock                    param1       000108
+?_rtcInit                        param1       000108
+?_rtcReadRam                     param1       000135
+?_rtcSaveLastSync                param1       000130
+?_rtcSetClock                    param1       000112
+?_rtcWriteRam                    param1       000135
+?_spiChipDeselect                param1       000137
+?_spiChipSelect                  param1       000137
+?_spiInit                        param1       000112
+?_spiRead                        param1       000137
+?_spiWrite                       param1       000137
+?_strcat                         param1       000143
+?_strcpy                         param1       000143
+?_wwvGetAnyBit                   param1       000130
+?_wwvGetBit                      param1       000135
+?_wwvGetSyncBit                  param1       000130
+?_wwvGetTime                     param1       000108
+?_wwvGetWeekDay                  param1       000143
+?_wwvInit                        param1       000108
+?_wwvMakeTimeStruct              param1       000130
+?_wwvRead8BitFrame               param1       000130
+?_wwvStartFrameTimer             param1       000130
+ButtonDown@y                     param1       000109
+ButtonDown@yZone                 param1       000108
+DisplayTime@ptt                  param1       000108
+DisplayTime@sz                   param1       000112
+DisplayTime@y                    param1       000111
+DisplayTime@yAll                 param1       00010A
+DisplayTime@yHr                  param1       00010C
+DisplayTime@yPM                  param1       00010B
+DisplayTime@yTZ                  param1       000110
+DisplayTime@yUpdateHr            param1       00010D
+DisplayTime@yUpdateMin           param1       00010E
+DisplayTime@yUpdateSec           param1       00010F
+DrawTZSetting@y                  param1       00010D
+DrawTZSetting@yTZ                param1       00010C
+MakeDateString@pszBuffer         param1       000136
+MakeDateString@ptt               param1       000134
+MakeDateString@sz                param1       00013A
+MakeDateString@yChar             param1       000138
+MakeDateString@yPos              param1       000139
+Vdelay_ms@_dcnt                  param1       000110
+Vdelay_ms@wCount                 param1       00010E
+Vdelay_ms@wDelay                 param1       00010C
+_ADCON0                          (abs)        000FC2
+_ADCON1                          (abs)        000FC1
+_ButtonDown                      text5        001488
+_CCP1CON                         (abs)        000FBD
+_CCP2CON                         (abs)        000FBA
+_CMCON                           (abs)        000FB4
+_CVRCON                          (abs)        000FB5
+_DelayShort                      text51       003786
+_DisplayTime                     text4        000868
+_DrawTZSetting                   text17       002D60
+_GlobalInt                       text52       002F8A
+_INTCONbits                      (abs)        000FF2
+_LATA0                           (abs)        007C48
+_LATA1                           (abs)        007C49
+_LATA3                           (abs)        007C4B
+_LATA4                           (abs)        007C4C
+_LATA5                           (abs)        007C4D
+_LATB0                           (abs)        007C50
+_LATB1                           (abs)        007C51
+_LATB3                           (abs)        007C53
+_LATB4                           (abs)        007C54
+_LATB5                           (abs)        007C55
+_LATC                            (abs)        000F8B
+_MakeDateString                  text14       001992
+_OSCCONbits                      (abs)        000FD3
+_PIE1bits                        (abs)        000F9D
+_PIR1bits                        (abs)        000F9E
+_PORTA                           (abs)        000F80
+_PORTB                           (abs)        000F81
+_PORTC                           (abs)        000F82
+_RA2                             (abs)        007C02
+_RA4                             (abs)        007C04
+_RB2                             (abs)        007C0A
+_RBPU                            (abs)        007F8F
+_RCONbits                        (abs)        000FD0
+_T0CONbits                       (abs)        000FD5
+_T1CONbits                       (abs)        000FCD
+_TMR0                            (abs)        000FD6
+_TMR1H                           (abs)        000FCF
+_TMR1L                           (abs)        000FCE
+_TRISA                           (abs)        000F92
+_TRISA4                          (abs)        007C94
+_TRISB                           (abs)        000F93
+_TRISC                           (abs)        000F94
+_Vdelay_ms                       text30       0030D4
+__Bnvbit                         nvbit        00000E
+__Brbit                          rbit         00000E
+__HRAM                           (abs)        000000
+__Habsbss0                       (abs)        00000E
+__Hbigbss                        bigbss       00016A
+__Hbigdata                       bigdata      00016A
+__Hbss                           bss          00000E
+__Hclrtext                       clrtext      00003A
+__Hconfig                        config       30000A
+__Hconst                         const        00003A
+__Hdata                          data         00003A
+__Heeprom_data                   eeprom_data  F00000
+__Hend_init                      end_init     00003A
+__Hfarbss                        farbss       000000
+__Hfardata                       fardata      000000
+__Hibigdata                      ibigdata     00003A
+__Hidata                         idata        00003A
+__Hidloc                         idloc        200000
+__Hifardata                      ifardata     00003A
+__Hinit                          init         000024
+__Hintcode                       intcode      000018
+__Hintcodelo                     intcodelo    000018
+__Hintentry                      intentry     00003A
+__Hintret                        intret       00003A
+__Hintsave_regs                  intsave_regs 00016A
+__Hirdata                        irdata       00003A
+__Hmediumconst                   mediumconst  004000
+__Hnvbit                         nvbit        000070
+__Hnvram                         nvram        00003A
+__Hnvrram                        nvrram       00000E
+__Hparam                         param1       00016A
+__Hparam0                        param0       00003A
+__Hparam1                        param1       00016A
+__Hparam2                        param2       00003A
+__Hpowerup                       powerup      000018
+__Hramtop                        ramtop       000300
+__Hrbit                          rbit         000070
+__Hrbss                          rbss         00000E
+__Hrdata                         rdata        00000E
+__Hreset_vec                     reset_vec    000004
+__Hrparam                        rparam       00003A
+__Hsmallconst                    smallconst   000300
+__Hstruct                        struct       00000E
+__Htemp                          temp         00000E
+__Htext                          text         00003A
+__Htext0                         text0        00003A
+__Htext1                         text1        00003A
+__Htext10                        text10       00003A
+__Htext11                        text11       00003A
+__Htext12                        text12       00003A
+__Htext13                        text13       00003A
+__Htext14                        text14       00003A
+__Htext15                        text15       00003A
+__Htext16                        text16       00003A
+__Htext17                        text17       00003A
+__Htext18                        text18       00003A
+__Htext19                        text19       00003A
+__Htext2                         text2        00003A
+__Htext20                        text20       00003A
+__Htext21                        text21       00003A
+__Htext22                        text22       00003A
+__Htext23                        text23       00003A
+__Htext24                        text24       00003A
+__Htext25                        text25       00003A
+__Htext26                        text26       00003A
+__Htext27                        text27       00003A
+__Htext28                        text28       00003A
+__Htext29                        text29       00003A
+__Htext3                         text3        00003A
+__Htext30                        text30       00003A
+__Htext31                        text31       00003A
+__Htext32                        text32       00003A
+__Htext33                        text33       00003A
+__Htext34                        text34       00003A
+__Htext35                        text35       00003A
+__Htext36                        text36       00003A
+__Htext37                        text37       00003A
+__Htext38                        text38       00003A
+__Htext39                        text39       00003A
+__Htext4                         text4        00003A
+__Htext40                        text40       00003A
+__Htext41                        text41       00003A
+__Htext42                        text42       00003A
+__Htext43                        text43       00003A
+__Htext44                        text44       00003A
+__Htext45                        text45       00003A
+__Htext46                        text46       00003A
+__Htext47                        text47       00003A
+__Htext48                        text48       00003A
+__Htext49                        text49       00003A
+__Htext5                         text5        00003A
+__Htext50                        text50       00003A
+__Htext51                        text51       00003A
+__Htext52                        text52       00003A
+__Htext6                         text6        00003A
+__Htext7                         text7        00003A
+__Htext8                         text8        00003A
+__Htext9                         text9        00003A
+__LRAM                           (abs)        000001
+__Labsbss0                       (abs)        000000
+__Lbigbss                        bigbss       00016A
+__Lbigdata                       bigdata      00016A
+__Lbss                           bss          00000E
+__Lclrtext                       clrtext      00003A
+__Lconfig                        config       300000
+__Lconst                         const        00003A
+__Ldata                          (abs)        000000
+__Leeprom_data                   eeprom_data  F00000
+__Lend_init                      end_init     000024
+__Lfarbss                        farbss       000000
+__Lfardata                       fardata      000000
+__Libigdata                      ibigdata     00003A
+__Lidata                         idata        00003A
+__Lidloc                         idloc        200000
+__Lifardata                      ifardata     00003A
+__Linit                          init         000018
+__Lintcode                       intcode      000008
+__Lintcodelo                     intcodelo    000018
+__Lintentry                      intentry     00003A
+__Lintret                        intret       00003A
+__Lintsave_regs                  intsave_regs 00016A
+__Lirdata                        irdata       00003A
+__Lmediumconst                   mediumconst  0039F2
+__Lnvbit                         nvbit        000070
+__Lnvram                         nvram        00003A
+__Lnvrram                        nvrram       00000E
+__Lparam                         param1       000100
+__Lparam0                        param0       00003A
+__Lparam1                        param1       000100
+__Lparam2                        param2       00003A
+__Lpowerup                       powerup      000018
+__Lramtop                        ramtop       000300
+__Lrbit                          rbit         000070
+__Lrbss                          rbss         00000E
+__Lrdata                         rdata        00000E
+__Lreset_vec                     reset_vec    000000
+__Lrparam                        rparam       00003A
+__Lsmallconst                    smallconst   000300
+__Lstruct                        struct       00000E
+__Ltemp                          temp         00000E
+__Ltext                          text         00003A
+__Ltext0                         text0        00003A
+__Ltext1                         text1        00003A
+__Ltext10                        text10       00003A
+__Ltext11                        text11       00003A
+__Ltext12                        text12       00003A
+__Ltext13                        text13       00003A
+__Ltext14                        text14       00003A
+__Ltext15                        text15       00003A
+__Ltext16                        text16       00003A
+__Ltext17                        text17       00003A
+__Ltext18                        text18       00003A
+__Ltext19                        text19       00003A
+__Ltext2                         text2        00003A
+__Ltext20                        text20       00003A
+__Ltext21                        text21       00003A
+__Ltext22                        text22       00003A
+__Ltext23                        text23       00003A
+__Ltext24                        text24       00003A
+__Ltext25                        text25       00003A
+__Ltext26                        text26       00003A
+__Ltext27                        text27       00003A
+__Ltext28                        text28       00003A
+__Ltext29                        text29       00003A
+__Ltext3                         text3        00003A
+__Ltext30                        text30       00003A
+__Ltext31                        text31       00003A
+__Ltext32                        text32       00003A
+__Ltext33                        text33       00003A
+__Ltext34                        text34       00003A
+__Ltext35                        text35       00003A
+__Ltext36                        text36       00003A
+__Ltext37                        text37       00003A
+__Ltext38                        text38       00003A
+__Ltext39                        text39       00003A
+__Ltext4                         text4        00003A
+__Ltext40                        text40       00003A
+__Ltext41                        text41       00003A
+__Ltext42                        text42       00003A
+__Ltext43                        text43       00003A
+__Ltext44                        text44       00003A
+__Ltext45                        text45       00003A
+__Ltext46                        text46       00003A
+__Ltext47                        text47       00003A
+__Ltext48                        text48       00003A
+__Ltext49                        text49       00003A
+__Ltext5                         text5        00003A
+__Ltext50                        text50       00003A
+__Ltext51                        text51       00003A
+__Ltext52                        text52       00003A
+__Ltext6                         text6        00003A
+__Ltext7                         text7        00003A
+__Ltext8                         text8        00003A
+__Ltext9                         text9        00003A
+__S0                             (abs)        F00000
+__S1                             (abs)        000200
+___awdiv                         text41       002494
+___awdiv@counter                 param1       000157
+___awdiv@dividend                param1       000153
+___awdiv@divisor                 param1       000155
+___awdiv@quotient                param1       000159
+___awdiv@sign                    param1       000158
+___awmod                         text40       002734
+___awmod@counter                 param1       000158
+___awmod@dividend                param1       000153
+___awmod@divisor                 param1       000155
+___awmod@sign                    param1       000157
+___wmul                          text39       003152
+___wmul@multiplicand             param1       000155
+___wmul@multiplier               param1       000153
+___wmul@product                  param1       000157
+__accesstop                      (abs)        000080
+__activetblptr                   (abs)        000002
+__config1                        (abs)        00F0FF
+__config2                        (abs)        00FEF8
+__config3                        (abs)        00FDFF
+__config4                        (abs)        00FFFB
+__config5                        (abs)        00FFFF
+__end_of_ButtonDown              text5        00171E
+__end_of_DelayShort              text51       00378A
+__end_of_DisplayTime             text4        000DD6
+__end_of_DrawTZSetting           text17       002E1C
+__end_of_GlobalInt               text52       003030
+__end_of_MakeDateString          text14       001BC4
+__end_of_Vdelay_ms               text30       003152
+__end_of___awdiv                 text41       0025EE
+__end_of___awmod                 text40       002866
+__end_of___wmul                  text39       0031C6
+__end_of_glbaseDisableController text50       003714
+__end_of_glbaseEnableController  text49       003738
+__end_of_glbaseInit              text24       00360A
+__end_of_glbaseWaitForNonBusy    text48       0035A0
+__end_of_glbaseWriteData         text47       003562
+__end_of_glcdClearScreen         text21       002BCE
+__end_of_glcdDrawBitmap          text36       002990
+__end_of_glcdDrawImage           text12       001488
+__end_of_glcdInit                text3        0030D4
+__end_of_glcdMakeLastSyncString  text10       001992
+__end_of_glcdMoveTo              text32       00351E
+__end_of_glcdSetCol              text45       0036CA
+__end_of_glcdSetPage             text46       00366A
+__end_of_glcdWriteChar           text44       002ABA
+__end_of_glcdWriteString         text29       003318
+__end_of_main                    text0        001DE4
+__end_of_memcpy                  text7        0033D6
+__end_of_rtc24to12Hour           text13       002ED6
+__end_of_rtcBCDToDec             text35       00369A
+__end_of_rtcBumpLastSync         text16       002C98
+__end_of_rtcDecToBCD             text31       003430
+__end_of_rtcGetClock             text1        002D60
+__end_of_rtcInit                 text8        001FC4
+__end_of_rtcReadRam              text34       0036F0
+__end_of_rtcSaveLastSync         text23       00231A
+__end_of_rtcSetClock             text22       002734
+__end_of_rtcWriteRam             text28       00376C
+__end_of_spiChipDeselect         text38       00377E
+__end_of_spiChipSelect           text42       003786
+__end_of_spiInit                 text9        003776
+__end_of_spiRead                 text37       0032A8
+__end_of_spiWrite                text43       003378
+__end_of_strcat                  text27       003238
+__end_of_strcpy                  text25       003484
+__end_of_wwvGetAnyBit            text20       0035D6
+__end_of_wwvGetBit               text26       002494
+__end_of_wwvGetSyncBit           text18       0034D2
+__end_of_wwvGetTime              text6        000868
+__end_of_wwvGetWeekDay           text33       002180
+__end_of_wwvInit                 text2        00363A
+__end_of_wwvMakeTimeStruct       text15       001156
+__end_of_wwvRead8BitFrame        text19       002F8A
+__end_of_wwvStartFrameTimer      text11       003752
+__mediumconst                    mediumconst  0039F2
+__ramtop                         ramtop       000300
+__smallconst                     smallconst   000300
+_cszBlank                        mediumconst  003FF6
+_cszDT                           mediumconst  003F7A
+_cszDay                          mediumconst  003CAA
+_cszLastSync                     mediumconst  003FB2
+_cszMonth                        mediumconst  003C32
+_cszST                           mediumconst  003F96
+_cszSet                          mediumconst  003FFA
+_cszSync                         mediumconst  003FE8
+_cszTZChange                     mediumconst  003FC4
+_cszTimeZone                     mediumconst  003CF7
+_dig0                            mediumconst  003DCD
+_dig1                            mediumconst  003DF4
+_dig2                            mediumconst  003E1B
+_dig3                            mediumconst  003E42
+_dig4                            mediumconst  003E69
+_dig5                            mediumconst  003E90
+_dig6                            mediumconst  003EB7
+_dig7                            mediumconst  003EDE
+_dig8                            mediumconst  003F05
+_dig9                            mediumconst  003F2C
+_digAM                           mediumconst  003D71
+_digBlank                        mediumconst  003F53
+_digColon                        mediumconst  003FD6
+_digPM                           mediumconst  003D9F
+_exit                            init         000018
+_g_ts                            (abs)        000000
+_g_wFrameCounter                 (abs)        00000B
+_g_yTimedOut                     (abs)        000009
+_g_yUpdate                       (abs)        00000D
+_glbaseDisableController         text50       0036F0
+_glbaseEnableController          text49       003714
+_glbaseInit                      text24       0035D6
+_glbaseWaitForNonBusy            text48       003562
+_glbaseWriteData                 text47       00351E
+_glcdClearScreen                 text21       002ABA
+_glcdDrawBitmap                  text36       002866
+_glcdDrawImage                   text12       001156
+_glcdInit                        text3        003030
+_glcdMakeLastSyncString          text10       00171E
+_glcdMoveTo                      text32       0034D2
+_glcdSetCol                      text45       00369A
+_glcdSetPage                     text46       00363A
+_glcdWriteChar                   text44       002990
+_glcdWriteString                 text29       0032A8
+_main                            text0        001BC4
+_memcpy                          text7        003378
+_rtc24to12Hour                   text13       002E1C
+_rtcBCDToDec                     text35       00366A
+_rtcBumpLastSync                 text16       002BCE
+_rtcDecToBCD                     text31       0033D6
+_rtcGetClock                     text1        002C98
+_rtcInit                         text8        001DE4
+_rtcReadRam                      text34       0036CA
+_rtcSaveLastSync                 text23       002180
+_rtcSetClock                     text22       0025EE
+_rtcWriteRam                     text28       003752
+_s_yLastCol                      (abs)        00000A
+_s_yLastPage                     (abs)        000008
+_s_yLastSeg                      (abs)        000007
+_spiChipDeselect                 text38       003776
+_spiChipSelect                   text42       00377E
+_spiInit                         text9        00376C
+_spiRead                         text37       003238
+_spiWrite                        text43       003318
+_strcat                          text27       0031C6
+_strcpy                          text25       003430
+_wEOM                            mediumconst  003D3D
+_wwvGetAnyBit                    text20       0035A0
+_wwvGetBit                       text26       00231A
+_wwvGetSyncBit                   text18       003484
+_wwvGetTime                      text6        00003A
+_wwvGetTime$1280                 param1       00010A
+_wwvGetTime$1281                 param1       00010B
+_wwvGetTime$1282                 param1       00010C
+_wwvGetTime$1283                 param1       00010D
+_wwvGetTime$1284                 param1       00010E
+_wwvGetTime$1285                 param1       00010F
+_wwvGetWeekDay                   text33       001FC4
+_wwvInit                         text2        00360A
+_wwvMakeTimeStruct               text15       000DD6
+_wwvRead8BitFrame                text19       002ED6
+_wwvStartFrameTimer              text11       003738
+_yFont6x8                        mediumconst  0039F2
+glbaseDisableController@yCS      param1       00014B
+glbaseEnableController@yCS       param1       00014B
+glbaseWaitForNonBusy@yCS         param1       000149
+glbaseWaitForNonBusy@yStatus     param1       00014A
+glbaseWriteData@yCS              param1       000148
+glbaseWriteData@yDFlag           param1       000147
+glbaseWriteData@yData            param1       000146
+glcdClearScreen@ySeg             param1       000132
+glcdClearScreen@yX               param1       000131
+glcdClearScreen@yY               param1       000130
+glcdDrawBitmap@pBMP              param1       00013A
+glcdDrawBitmap@yBaseCol          param1       00013E
+glcdDrawBitmap@yBaseSeg          param1       00013F
+glcdDrawBitmap@yHeight           param1       00013D
+glcdDrawBitmap@yWidth            param1       00013C
+glcdDrawBitmap@yXAxis            param1       000140
+glcdDrawBitmap@yYAxis            param1       000141
+glcdDrawImage@py                 param1       000137
+glcdDrawImage@yH                 param1       000135
+glcdDrawImage@yNum               param1       000134
+glcdDrawImage@yW                 param1       000136
+glcdInit@y                       param1       000108
+glcdMakeLastSyncString@pBuffer   param1       000130
+glcdMakeLastSyncString@yChar     param1       000136
+glcdMakeLastSyncString@yDate     param1       000133
+glcdMakeLastSyncString@yHour     param1       000134
+glcdMakeLastSyncString@yMin      param1       000135
+glcdMakeLastSyncString@yMonth    param1       000132
+glcdMakeLastSyncString@yPos      param1       000137
+glcdMoveTo@yX                    param1       000134
+glcdMoveTo@yY                    param1       000135
+glcdSetCol@yCol                  param1       000143
+glcdSetCol@ySeg                  param1       000144
+glcdSetPage@yPage                param1       000143
+glcdSetPage@ySeg                 param1       000144
+glcdWriteChar@i                  param1       000139
+glcdWriteChar@pChar              param1       000137
+glcdWriteChar@yChar              param1       000136
+glcdWriteString@pString          param1       000134
+int_func                         intcode      000008
+intlevel0                        text         00378A
+intlevel1                        text         00378A
+intlevel2                        text         00378A
+intlevel3                        text         00378A
+main@tt                          param1       000100
+memcpy@d                         param1       00010E
+memcpy@d1                        param1       000108
+memcpy@n                         param1       00010C
+memcpy@s                         param1       000110
+memcpy@s1                        param1       00010A
+rtc24to12Hour@pPM                param1       000135
+rtc24to12Hour@yBin               param1       000138
+rtc24to12Hour@yHour              param1       000134
+rtc24to12Hour@yHr                param1       000137
+rtcBCDToDec@yBin                 param1       000144
+rtcBCDToDec@yNum                 param1       000143
+rtcBumpLastSync@yDate            param1       000130
+rtcBumpLastSync@yHr              param1       000131
+rtcBumpLastSync@yMin             param1       000132
+rtcBumpLastSync@yMonth           param1       000133
+rtcDecToBCD@yNum                 param1       000143
+rtcGetClock@pTime                param1       000108
+rtcInit@tt                       param1       000109
+rtcInit@y                        param1       000108
+rtcReadRam@y                     param1       000136
+rtcReadRam@yAddress              param1       000135
+rtcSaveLastSync@pt               param1       000130
+rtcSaveLastSync@ySet             param1       000132
+rtcSetClock@pTime                param1       000112
+rtcWriteRam@yAddress             param1       000135
+rtcWriteRam@yData                param1       000136
+spiRead@yData                    param1       000137
+spiRead@yShift                   param1       000138
+spiWrite@yByte                   param1       000137
+spiWrite@yShift                  param1       000138
+start                            init         000018
+strcat@cp                        param1       000147
+strcat@from                      param1       000145
+strcat@to                        param1       000143
+strcpy@cp                        param1       000147
+strcpy@from                      param1       000145
+strcpy@to                        param1       000143
+wwvGetBit@y25Count               param1       00013B
+wwvGetBit@yHighMax               param1       000135
+wwvGetBit@yHighMin               param1       000136
+wwvGetBit@yLowMax                param1       000137
+wwvGetBit@yLowMin                param1       000138
+wwvGetBit@ySyncMax               param1       00013A
+wwvGetBit@ySyncMin               param1       000139
+wwvGetTime@pt                    param1       000108
+wwvGetTime@sz                    param1       00011E
+wwvGetTime@wDays                 param1       00011C
+wwvGetTime@y                     param1       000112
+wwvGetTime@yDST                  param1       000119
+wwvGetTime@yDays1                param1       000116
+wwvGetTime@yDays2                param1       000110
+wwvGetTime@yHour                 param1       00011A
+wwvGetTime@yLeap                 param1       000113
+wwvGetTime@yLower                param1       00011B
+wwvGetTime@yMin                  param1       000117
+wwvGetTime@yTZ                   param1       000111
+wwvGetTime@yUpper                param1       000118
+wwvGetTime@yYears1               param1       000114
+wwvGetTime@yYears2               param1       000115
+wwvGetWeekDay@nDate              param1       000145
+wwvGetWeekDay@nMonth             param1       000143
+wwvGetWeekDay@nYear              param1       000147
+wwvGetWeekDay@r                  param1       000149
+wwvMakeTimeStruct@nEndMonth      param1       00013C
+wwvMakeTimeStruct@pt             param1       000130
+wwvMakeTimeStruct@wDD            param1       00013A
+wwvMakeTimeStruct@wDays          param1       000134
+wwvMakeTimeStruct@yDST           param1       000138
+wwvMakeTimeStruct@yHour          param1       000133
+wwvMakeTimeStruct@yLeap          param1       000137
+wwvMakeTimeStruct@yMin           param1       000132
+wwvMakeTimeStruct@yTZ            param1       000139
+wwvMakeTimeStruct@yYears         param1       000136
+wwvRead8BitFrame@pResult         param1       000130
+wwvRead8BitFrame@y               param1       000133
+wwvRead8BitFrame@yCode           param1       000132

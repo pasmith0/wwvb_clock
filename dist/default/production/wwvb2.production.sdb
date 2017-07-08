@@ -1,0 +1,941 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F2420 ]
+[s S110 _TIMESTRUCT 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hr 1 2 `uc 1 date 1 3 `uc 1 month 1 4 `uc 1 day 1 5 `uc 1 year 1 6 ]
+"62 main.c
+[v F2290 `DC[11]uc  0a t 11 ]
+"65
+[v F2292 `DC[10]uc  0a t 10 ]
+"70
+[v F2295 `DC[10]uc  0a t 10 ]
+"74
+[v F2299 `DC[4]uc  0a t 4 ]
+"75
+[v F2301 `DC[4]uc  0a t 4 ]
+[s S135 . 1 `Vuc 1 SCS 1 0 :2:0 
+`Vuc 1 IOFS 1 0 :1:2 
+`Vuc 1 OSTS 1 0 :1:3 
+`Vuc 1 IRCF 1 0 :3:4 
+`Vuc 1 IDLEN 1 0 :1:7 
+]
+[s S141 . 1 `Vuc 1 SCS0 1 0 :1:0 
+`Vuc 1 SCS1 1 0 :1:1 
+`Vuc 1 FLTS 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 IRCF0 1 0 :1:4 
+`Vuc 1 IRCF1 1 0 :1:5 
+`Vuc 1 IRCF2 1 0 :1:6 
+]
+[u S149 . 1 `S135 1 . 1 0 `S141 1 . 1 0 ]
+"88 rtc.h
+[s S210 . 1 `Vuc 1 TMR1IF 1 0 :1:0 
+`Vuc 1 TMR2IF 1 0 :1:1 
+`Vuc 1 CCP1IF 1 0 :1:2 
+`Vuc 1 SSPIF 1 0 :1:3 
+`Vuc 1 TXIF 1 0 :1:4 
+`Vuc 1 RCIF 1 0 :1:5 
+`Vuc 1 ADIF 1 0 :1:6 
+]
+[s S218 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 . 1 0 :1:1 
+`Vuc 1 . 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 . 1 0 :2:4 
+`Vuc 1 . 1 0 :1:6 
+]
+[u S225 . 1 `S210 1 . 1 0 `S218 1 . 1 0 ]
+"751 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\include\pic18f2420.h
+[s S229 . 1 `Vuc 1 TMR1ON 1 0 :1:0 
+`Vuc 1 TMR1CS 1 0 :1:1 
+`Vuc 1 nT1SYNC 1 0 :1:2 
+`Vuc 1 T1OSCEN 1 0 :1:3 
+`Vuc 1 T1CKPS 1 0 :2:4 
+`Vuc 1 T1RUN 1 0 :1:6 
+`Vuc 1 RD16 1 0 :1:7 
+]
+[s S237 . 1 `Vuc 1 . 1 0 :2:0 
+`Vuc 1 T1SYNC 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 T1CKPS0 1 0 :1:4 
+`Vuc 1 T1CKPS1 1 0 :1:5 
+]
+[u S243 . 1 `S229 1 . 1 0 `S237 1 . 1 0 ]
+"49 main.c
+[v F2282 `(v  1 t 0 ]
+[s S284 _TIMESTRUCT 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hr 1 2 `uc 1 date 1 3 `uc 1 month 1 4 `uc 1 day 1 5 `uc 1 year 1 6 ]
+"42 wwv.c
+[v F2219 `DC[2]ui  0a t 4 ]
+"477 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\include\pic18f2420.h
+[s S355 . 1 `Vuc 1 nBOR 1 0 :1:0 
+`Vuc 1 nPOR 1 0 :1:1 
+`Vuc 1 nPD 1 0 :1:2 
+`Vuc 1 nTO 1 0 :1:3 
+`Vuc 1 nRI 1 0 :1:4 
+`Vuc 1 . 1 0 :1:5 
+`Vuc 1 SBOREN 1 0 :1:6 
+`Vuc 1 IPEN 1 0 :1:7 
+]
+[s S364 . 1 `Vuc 1 BOR 1 0 :1:0 
+`Vuc 1 POR 1 0 :1:1 
+`Vuc 1 PD 1 0 :1:2 
+`Vuc 1 TO 1 0 :1:3 
+`Vuc 1 RI 1 0 :1:4 
+]
+[u S370 . 1 `S355 1 . 1 0 `S364 1 . 1 0 ]
+"1593
+[s S374 . 1 `Vuc 1 T0PS 1 0 :3:0 
+`Vuc 1 PSA 1 0 :1:3 
+`Vuc 1 T0SE 1 0 :1:4 
+`Vuc 1 T0CS 1 0 :1:5 
+`Vuc 1 T08BIT 1 0 :1:6 
+`Vuc 1 TMR0ON 1 0 :1:7 
+]
+[s S381 . 1 `Vuc 1 T0PS0 1 0 :1:0 
+`Vuc 1 T0PS1 1 0 :1:1 
+`Vuc 1 T0PS2 1 0 :1:2 
+`Vuc 1 T0PS3 1 0 :1:3 
+`Vuc 1 . 1 0 :2:4 
+`Vuc 1 T016BIT 1 0 :1:6 
+]
+[u S388 . 1 `S374 1 . 1 0 `S381 1 . 1 0 ]
+"1724
+[s S392 . 1 `Vuc 1 RBIF 1 0 :1:0 
+`Vuc 1 INT0IF 1 0 :1:1 
+`Vuc 1 TMR0IF 1 0 :1:2 
+`Vuc 1 RBIE 1 0 :1:3 
+`Vuc 1 INT0IE 1 0 :1:4 
+`Vuc 1 TMR0IE 1 0 :1:5 
+`Vuc 1 PEIE_GIEL 1 0 :1:6 
+`Vuc 1 GIE_GIEH 1 0 :1:7 
+]
+[s S401 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 . 1 0 :1:1 
+`Vuc 1 . 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 . 1 0 :1:4 
+`Vuc 1 . 1 0 :1:5 
+`Vuc 1 PEIE 1 0 :1:6 
+`Vuc 1 GIE 1 0 :1:7 
+]
+[s S410 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 . 1 0 :1:1 
+`Vuc 1 . 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 . 1 0 :1:4 
+`Vuc 1 . 1 0 :1:5 
+`Vuc 1 GIEL 1 0 :1:6 
+`Vuc 1 GIEH 1 0 :1:7 
+]
+[s S419 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 . 1 0 :1:1 
+`Vuc 1 . 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 . 1 0 :1:4 
+`Vuc 1 . 1 0 :1:5 
+`Vuc 1 . 1 0 :1:6 
+`Vuc 1 . 1 0 :1:7 
+]
+[s S428 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 INT0F 1 0 :1:1 
+`Vuc 1 T0IF 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 INT0E 1 0 :1:4 
+`Vuc 1 T0IE 1 0 :1:5 
+`Vuc 1 . 1 0 :1:6 
+`Vuc 1 . 1 0 :1:7 
+]
+[s S437 . 1 `Vuc 1 . 1 0 :6:0 
+`Vuc 1 . 1 0 :1:6 
+`Vuc 1 . 1 0 :1:7 
+]
+[u S441 . 1 `S392 1 . 1 0 `S401 1 . 1 0 `S410 1 . 1 0 `S419 1 . 1 0 `S428 1 . 1 0 `S437 1 . 1 0 ]
+"2021
+[s S449 . 1 `Vuc 1 TMR1ON 1 0 :1:0 
+`Vuc 1 TMR1CS 1 0 :1:1 
+`Vuc 1 nT1SYNC 1 0 :1:2 
+`Vuc 1 T1OSCEN 1 0 :1:3 
+`Vuc 1 T1CKPS 1 0 :2:4 
+`Vuc 1 T1RUN 1 0 :1:6 
+`Vuc 1 RD16 1 0 :1:7 
+]
+[s S457 . 1 `Vuc 1 . 1 0 :2:0 
+`Vuc 1 T1SYNC 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 T1CKPS0 1 0 :1:4 
+`Vuc 1 T1CKPS1 1 0 :1:5 
+]
+[u S463 . 1 `S229 1 . 1 0 `S237 1 . 1 0 ]
+"1546
+[s S467 . 1 `Vuc 1 TMR1IF 1 0 :1:0 
+`Vuc 1 TMR2IF 1 0 :1:1 
+`Vuc 1 CCP1IF 1 0 :1:2 
+`Vuc 1 SSPIF 1 0 :1:3 
+`Vuc 1 TXIF 1 0 :1:4 
+`Vuc 1 RCIF 1 0 :1:5 
+`Vuc 1 ADIF 1 0 :1:6 
+]
+[s S475 . 1 `Vuc 1 . 1 0 :1:0 
+`Vuc 1 . 1 0 :1:1 
+`Vuc 1 . 1 0 :1:2 
+`Vuc 1 . 1 0 :1:3 
+`Vuc 1 . 1 0 :2:4 
+`Vuc 1 . 1 0 :1:6 
+]
+[u S482 . 1 `S210 1 . 1 0 `S218 1 . 1 0 ]
+"751
+[s S486 . 1 `Vuc 1 TMR1IE 1 0 :1:0 
+`Vuc 1 TMR2IE 1 0 :1:1 
+`Vuc 1 CCP1IE 1 0 :1:2 
+`Vuc 1 SSPIE 1 0 :1:3 
+`Vuc 1 TXIE 1 0 :1:4 
+`Vuc 1 RCIE 1 0 :1:5 
+`Vuc 1 ADIE 1 0 :1:6 
+]
+[u S494 . 1 `S486 1 . 1 0 ]
+"721
+[s S497 _TIMESTRUCT 7 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hr 1 2 `uc 1 date 1 3 `uc 1 month 1 4 `uc 1 day 1 5 `uc 1 year 1 6 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\memcpy.c
+[v _memcpy `(*.Mv  1 e 2 0 ]
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\strcat.c
+[v _strcat `(*.Muc  1 e 2 0 ]
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\strcpy.c
+[v _strcpy `(*.Muc  1 e 2 0 ]
+"3 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"40 glbase.c
+[v _glbaseInit `(v  1 e 0 0 ]
+"78
+[v _glbaseEnableController `(v  1 e 0 0 ]
+"106
+[v _glbaseDisableController `(v  1 e 0 0 ]
+"135
+[v _glbaseWaitForNonBusy `(v  1 e 0 0 ]
+"214
+[v _glbaseWriteData `(v  1 e 0 0 ]
+"45 glcd.c
+[v _glcdInit `(v  1 e 0 0 ]
+"79
+[v _glcdClearScreen `(v  1 e 0 0 ]
+"121
+[v _glcdSetPage `(v  1 e 0 0 ]
+"146
+[v _glcdSetCol `(v  1 e 0 0 ]
+"172
+[v _glcdMoveTo `(v  1 e 0 0 ]
+"211
+[v _glcdWriteChar `(v  1 e 0 0 ]
+"262
+[v _glcdWriteString `(v  1 e 0 0 ]
+"288
+[v _glcdDrawBitmap `(v  1 e 0 0 ]
+"360
+[v _glcdDrawImage `(v  1 e 0 0 ]
+"92 main.c
+[v _main `(v  1 e 0 0 ]
+"195
+[v _DisplayTime `(v  1 e 0 0 ]
+"302
+[v _MakeDateString `(v  1 e 0 0 ]
+"355
+[v _Vdelay_ms `(v  1 e 0 0 ]
+"383
+[v _DelayShort `(v  1 e 0 0 ]
+"406
+[v _ButtonDown `(v  1 e 0 0 ]
+"492
+[v _DrawTZSetting `(v  1 e 0 0 ]
+"528
+[v _GlobalInt `I(v  1 e 0 0 ]
+"40 rtc.c
+[v _rtcInit `(v  1 e 0 0 ]
+"95
+[v _rtcReadRam `(uc  1 e 1 0 ]
+"129
+[v _rtcWriteRam `(v  1 e 0 0 ]
+"160
+[v _rtcSetClock `(v  1 e 0 0 ]
+"192
+[v _rtcGetClock `(v  1 e 0 0 ]
+"227
+[v _rtcBCDToDec `(uc  1 e 1 0 ]
+"255
+[v _rtcDecToBCD `(uc  1 e 1 0 ]
+"281
+[v _rtc24to12Hour `(uc  1 e 1 0 ]
+"338
+[v _rtcSaveLastSync `(v  1 e 0 0 ]
+"372
+[v _rtcBumpLastSync `(v  1 e 0 0 ]
+"42 spi.c
+[v _spiInit `(v  1 e 0 0 ]
+"69
+[v _spiRead `(uc  1 e 1 0 ]
+"110
+[v _spiWrite `(v  1 e 0 0 ]
+"154
+[v _spiChipSelect `(v  1 e 0 0 ]
+"177
+[v _spiChipDeselect `(v  1 e 0 0 ]
+"78 wwv.c
+[v _wwvInit `(v  1 e 0 0 ]
+"129
+[v _wwvGetTime `(uc  1 e 1 0 ]
+"355
+[v _wwvMakeTimeStruct `(v  1 s 0 _wwvMakeTimeStruct ]
+"444
+[v _wwvGetBit `(uc  1 s 1 _wwvGetBit ]
+"508
+[v _wwvStartFrameTimer `(v  1 s 0 _wwvStartFrameTimer ]
+"540
+[v _wwvGetSyncBit `(uc  1 s 1 _wwvGetSyncBit ]
+"576
+[v _wwvRead8BitFrame `(uc  1 s 1 _wwvRead8BitFrame ]
+"620
+[v _wwvGetAnyBit `(uc  1 s 1 _wwvGetAnyBit ]
+"654
+[v _wwvGetWeekDay `(uc  1 s 1 _wwvGetWeekDay ]
+"693
+[v _glcdMakeLastSyncString `(v  1 s 0 _glcdMakeLastSyncString ]
+"13 bitmaps.h
+[v _dig0 `DC[39]uc  1 e 39 0 ]
+"19
+[v _dig1 `DC[39]uc  1 e 39 0 ]
+"25
+[v _dig2 `DC[39]uc  1 e 39 0 ]
+"31
+[v _dig3 `DC[39]uc  1 e 39 0 ]
+"37
+[v _dig4 `DC[39]uc  1 e 39 0 ]
+"43
+[v _dig5 `DC[39]uc  1 e 39 0 ]
+"49
+[v _dig6 `DC[39]uc  1 e 39 0 ]
+"56
+[v _dig7 `DC[39]uc  1 e 39 0 ]
+"62
+[v _dig8 `DC[39]uc  1 e 39 0 ]
+"68
+[v _dig9 `DC[39]uc  1 e 39 0 ]
+"75
+[v _digBlank `DC[39]uc  1 e 39 0 ]
+"83
+[v _digColon `DC[18]uc  1 e 18 0 ]
+"90
+[v _digAM `DC[46]uc  1 e 46 0 ]
+"97
+[v _digPM `DC[46]uc  1 e 46 0 ]
+"106
+[v _yFont6x8 `DC[576]uc  1 e 576 0 ]
+"63 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\include\legacy/ppic18f2420.h
+[v _RB2 `VNb  1 e 0 @31754 ]
+"73
+[v _RA2 `VNb  1 e 0 @31746 ]
+"75
+[v _RA4 `VNb  1 e 0 @31748 ]
+"242 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\include\pic18f2420.h
+[v _PORTA `Vuc  1 e 1 @3968 ]
+"323
+[v _PORTB `Vuc  1 e 1 @3969 ]
+"387
+[v _PORTC `Vuc  1 e 1 @3970 ]
+"477
+[v _LATA0 `Vb  1 e 0 @31816 ]
+"478
+[v _LATA1 `Vb  1 e 0 @31817 ]
+"480
+[v _LATA3 `Vb  1 e 0 @31819 ]
+"481
+[v _LATA4 `Vb  1 e 0 @31820 ]
+"482
+[v _LATA5 `Vb  1 e 0 @31821 ]
+"501
+[v _LATB0 `Vb  1 e 0 @31824 ]
+"502
+[v _LATB1 `Vb  1 e 0 @31825 ]
+"504
+[v _LATB3 `Vb  1 e 0 @31827 ]
+"505
+[v _LATB4 `Vb  1 e 0 @31828 ]
+"506
+[v _LATB5 `Vb  1 e 0 @31829 ]
+"523
+[v _LATC `Vuc  1 e 1 @3979 ]
+"547
+[v _TRISA `Vuc  1 e 1 @3986 ]
+"554
+[v _TRISA4 `Vb  1 e 0 @31892 ]
+"590
+[v _TRISB `Vuc  1 e 1 @3987 ]
+"633
+[v _TRISC `Vuc  1 e 1 @3988 ]
+"721
+[v _PIE1bits `S494  1 e 1 @3997 ]
+"751
+[v _PIR1bits `S225  1 e 1 @3998 ]
+"1007
+[v _CMCON `Vuc  1 e 1 @4020 ]
+"1034
+[v _CVRCON `Vuc  1 e 1 @4021 ]
+"1132
+[v _CCP2CON `Vuc  1 e 1 @4026 ]
+"1175
+[v _CCP1CON `Vuc  1 e 1 @4029 ]
+"1245
+[v _ADCON1 `Vuc  1 e 1 @4033 ]
+"1269
+[v _ADCON0 `Vuc  1 e 1 @4034 ]
+"1546
+[v _T1CONbits `S243  1 e 1 @4045 ]
+"1550
+[v _TMR1L `Vuc  1 e 1 @4046 ]
+"1554
+[v _TMR1H `Vuc  1 e 1 @4047 ]
+"1593
+[v _RCONbits `S370  1 e 1 @4048 ]
+"1692
+[v _OSCCONbits `S149  1 e 1 @4051 ]
+"1724
+[v _T0CONbits `S388  1 e 1 @4053 ]
+"1736
+[v _TMR0 `Vui  1 e 2 @4054 ]
+"1928
+[v _RBPU `Vb  1 e 0 @32655 ]
+"2021
+[v _INTCONbits `S441  1 e 1 @4082 ]
+"24 glcd.c
+[v _s_yLastSeg `Vuc  1 e 1 @7 ]
+"25
+[v _s_yLastCol `Vuc  1 e 1 @10 ]
+"26
+[v _s_yLastPage `Vuc  1 e 1 @8 ]
+"55 main.c
+[v _g_ts `VS110  1 e 7 @0 ]
+"56
+[v _g_yUpdate `Vuc  1 e 1 @13 ]
+"57
+[v _g_wFrameCounter `Vui  1 e 2 @11 ]
+"58
+[v _g_yTimedOut `Vuc  1 e 1 @9 ]
+"62
+[v _cszDay `DC[7][11]uc  1 e 77 0 ]
+"65
+[v _cszMonth `DC[12][10]uc  1 e 120 0 ]
+"69
+[v _cszTZChange `DC[18]uc  1 e 18 0 ]
+"70
+[v _cszTimeZone `DC[7][10]uc  1 e 70 0 ]
+"72
+[v _cszSet `DC[4]uc  1 e 4 0 ]
+"73
+[v _cszBlank `DC[4]uc  1 e 4 0 ]
+"74
+[v _cszST `DC[7][4]uc  1 e 28 0 ]
+"75
+[v _cszDT `DC[7][4]uc  1 e 28 0 ]
+"42 wwv.c
+[v _wEOM `DC[13][2]ui  1 e 52 0 ]
+"58
+[v _cszSync `DC[14]uc  1 e 14 0 ]
+"59
+[v _cszLastSync `DC[18]uc  1 e 18 0 ]
+"141
+"147
+"92 main.c
+[v _main `(v  1 e 0 0 ]
+{
+"93
+[v _tt `S110  1 a 7 0 ]
+"168
+} 7
+"192 rtc.c
+[v _rtcGetClock `(v  1 e 0 0 ]
+{
+[v _pTime `*.bS110  1 p 2 0 ]
+"207
+} 0
+"78 wwv.c
+[v _wwvInit `(v  1 e 0 0 ]
+{
+"106
+} 0
+"45 glcd.c
+[v _glcdInit `(v  1 e 0 0 ]
+{
+"46
+[v _y `uc  1 a 1 0 ]
+"59
+} 1
+"195 main.c
+[v _DisplayTime `(v  1 e 0 0 ]
+{
+"197
+[v _yPM `uc  1 a 1 0 ]
+[v _yHr `uc  1 a 1 1 ]
+"196
+[v _yUpdateHr `uc  1 a 1 2 ]
+[v _yUpdateMin `uc  1 a 1 3 ]
+[v _yUpdateSec `uc  1 a 1 4 ]
+"197
+[v _yTZ `uc  1 a 1 5 ]
+[v _y `uc  1 a 1 6 ]
+"198
+[v _sz `[32]uc  1 a 32 7 ]
+"195
+[v _ptt `*.bS110  1 p 2 0 ]
+[v _yAll `uc  1 p 1 2 ]
+"277
+} 39
+"406
+[v _ButtonDown `(v  1 e 0 0 ]
+{
+"407
+[v _yZone `uc  1 a 1 0 ]
+[v _y `uc  1 a 1 1 ]
+"472
+} 2
+"129 wwv.c
+[v _wwvGetTime `(uc  1 e 1 0 ]
+{
+"131
+[v _yDays2 `uc  1 a 1 6 ]
+[v _yTZ `uc  1 a 1 7 ]
+"130
+[v _y `uc  1 a 1 8 ]
+"131
+[v _yLeap `uc  1 a 1 9 ]
+[v _yYears1 `uc  1 a 1 10 ]
+[v _yYears2 `uc  1 a 1 11 ]
+[v _yDays1 `uc  1 a 1 12 ]
+[v _yMin `uc  1 a 1 13 ]
+"130
+[v _yUpper `uc  1 a 1 14 ]
+"131
+[v _yDST `uc  1 a 1 15 ]
+[v _yHour `uc  1 a 1 16 ]
+"130
+[v _yLower `uc  1 a 1 17 ]
+"132
+[v _wDays `ui  1 a 2 18 ]
+"133
+[v _sz `[16]uc  1 a 16 20 ]
+"129
+[v _pt `*.bS110  1 p 2 0 ]
+"324
+} 36
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\memcpy.c
+[v _memcpy `(*.Mv  1 e 2 0 ]
+{
+"15
+[v _d `*.auc  1 a 2 0 ]
+"17
+[v _s `*.bDCuc  1 a 2 2 ]
+"10
+[v _d1 `*.av  1 p 2 0 ]
+[v _s1 `*.bDCv  1 p 2 2 ]
+[v _n `ui  1 p 2 4 ]
+"24
+} 4
+"40 rtc.c
+[v _rtcInit `(v  1 e 0 0 ]
+{
+"41
+[v _y `uc  1 a 1 0 ]
+"42
+[v _tt `S110  1 a 7 1 ]
+"75
+} 8
+"42 spi.c
+[v _spiInit `(v  1 e 0 0 ]
+{
+"49
+} 0
+"693 wwv.c
+[v _glcdMakeLastSyncString `(v  1 s 0 _glcdMakeLastSyncString ]
+{
+"694
+[v _yChar `uc  1 a 1 0 ]
+[v _yPos `uc  1 a 1 1 ]
+"693
+[v _pBuffer `*.buc  1 p 2 0 ]
+[v _yMonth `uc  1 p 1 2 ]
+[v _yDate `uc  1 p 1 3 ]
+[v _yHour `uc  1 p 1 4 ]
+[v _yMin `uc  1 p 1 5 ]
+"724
+} 2
+"508
+[v _wwvStartFrameTimer `(v  1 s 0 _wwvStartFrameTimer ]
+{
+"517
+} 0
+"360 glcd.c
+[v _glcdDrawImage `(v  1 e 0 0 ]
+{
+"362
+[v _yH `uc  1 a 1 0 ]
+[v _yW `uc  1 a 1 1 ]
+"361
+[v _py `*.dDCuc  1 a 2 2 ]
+"360
+[v _yNum `uc  1 p 1 0 ]
+"387
+} 4
+"281 rtc.c
+[v _rtc24to12Hour `(uc  1 e 1 0 ]
+{
+"282
+[v _yHr `uc  1 a 1 0 ]
+"283
+[v _yBin `uc  1 a 1 1 ]
+"281
+[v _yHour `uc  1 p 1 0 ]
+[v _pPM `*.buc  1 p 2 1 ]
+"316
+} 2
+"302 main.c
+[v _MakeDateString `(v  1 e 0 0 ]
+{
+"304
+[v _yChar `uc  1 a 1 0 ]
+[v _yPos `uc  1 a 1 1 ]
+"303
+[v _sz `[8]uc  1 a 8 2 ]
+"302
+[v _ptt `*.bS110  1 p 2 0 ]
+[v _pszBuffer `*.buc  1 p 2 2 ]
+"332
+} 10
+"355 wwv.c
+[v _wwvMakeTimeStruct `(v  1 s 0 _wwvMakeTimeStruct ]
+{
+"356
+[v _wDD `ui  1 a 2 0 ]
+[v _nEndMonth `ui  1 a 2 2 ]
+"355
+[v _pt `*.bS110  1 p 2 0 ]
+[v _yMin `uc  1 p 1 2 ]
+[v _yHour `uc  1 p 1 3 ]
+[v _wDays `ui  1 p 2 4 ]
+[v _yYears `uc  1 p 1 6 ]
+[v _yLeap `uc  1 p 1 7 ]
+[v _yDST `uc  1 p 1 8 ]
+[v _yTZ `uc  1 p 1 9 ]
+"418
+} 4
+"372 rtc.c
+[v _rtcBumpLastSync `(v  1 e 0 0 ]
+{
+"373
+[v _yDate `uc  1 a 1 0 ]
+[v _yHr `uc  1 a 1 1 ]
+[v _yMin `uc  1 a 1 2 ]
+[v _yMonth `uc  1 a 1 3 ]
+"386
+} 4
+"492 main.c
+[v _DrawTZSetting `(v  1 e 0 0 ]
+{
+"493
+[v _y `uc  1 a 1 0 ]
+"492
+[v _yTZ `uc  1 p 1 0 ]
+"505
+} 1
+"540 wwv.c
+[v _wwvGetSyncBit `(uc  1 s 1 _wwvGetSyncBit ]
+{
+"554
+} 0
+"576
+[v _wwvRead8BitFrame `(uc  1 s 1 _wwvRead8BitFrame ]
+{
+"577
+[v _yCode `uc  1 a 1 0 ]
+[v _y `uc  1 a 1 1 ]
+"576
+[v _pResult `*.buc  1 p 2 0 ]
+"598
+} 2
+"620
+[v _wwvGetAnyBit `(uc  1 s 1 _wwvGetAnyBit ]
+{
+"632
+} 0
+"79 glcd.c
+[v _glcdClearScreen `(v  1 e 0 0 ]
+{
+"80
+[v _yY `uc  1 a 1 0 ]
+[v _yX `uc  1 a 1 1 ]
+[v _ySeg `uc  1 a 1 2 ]
+"98
+} 3
+"160 rtc.c
+[v _rtcSetClock `(v  1 e 0 0 ]
+{
+[v _pTime `*.bS110  1 p 2 0 ]
+"170
+} 0
+"338
+[v _rtcSaveLastSync `(v  1 e 0 0 ]
+{
+[v _pt `*.bS110  1 p 2 0 ]
+[v _ySet `uc  1 p 1 2 ]
+"354
+} 0
+"40 glbase.c
+[v _glbaseInit `(v  1 e 0 0 ]
+{
+"55
+} 0
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\strcpy.c
+[v _strcpy `(*.Muc  1 e 2 0 ]
+{
+"15
+[v _cp `*.buc  1 a 2 0 ]
+"10
+[v _to `*.buc  1 p 2 0 ]
+[v _from `*.dDCuc  1 p 2 2 ]
+"22
+} 2
+"444 wwv.c
+[v _wwvGetBit `(uc  1 s 1 _wwvGetBit ]
+{
+"450
+[v _yHighMax `DCuc  1 a 1 0 ]
+"449
+[v _yHighMin `DCuc  1 a 1 1 ]
+"448
+[v _yLowMax `DCuc  1 a 1 2 ]
+"447
+[v _yLowMin `DCuc  1 a 1 3 ]
+"451
+[v _ySyncMin `DCuc  1 a 1 4 ]
+"452
+[v _ySyncMax `DCuc  1 a 1 5 ]
+"445
+[v _y25Count `uc  1 a 1 6 ]
+"482
+} 7
+"10 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\strcat.c
+[v _strcat `(*.Muc  1 e 2 0 ]
+{
+"15
+[v _cp `*.buc  1 a 2 0 ]
+"10
+[v _to `*.buc  1 p 2 0 ]
+[v _from `*.bDCuc  1 p 2 2 ]
+"24
+} 2
+"129 rtc.c
+[v _rtcWriteRam `(v  1 e 0 0 ]
+{
+[v _yAddress `uc  1 p 1 0 ]
+[v _yData `uc  1 p 1 1 ]
+"138
+} 0
+"262 glcd.c
+[v _glcdWriteString `(v  1 e 0 0 ]
+{
+[v _pString `*.muc  1 p 2 0 ]
+"266
+} 0
+"355 main.c
+[v _Vdelay_ms `(v  1 e 0 0 ]
+{
+"356
+[v _wCount `ui  1 a 2 0 ]
+"360
+[v __dcnt `uc  1 a 1 2 ]
+"355
+[v _wDelay `ui  1 p 2 0 ]
+"363
+} 3
+"255 rtc.c
+[v _rtcDecToBCD `(uc  1 e 1 0 ]
+{
+[v _yNum `uc  1 p 1 0 ]
+"258
+} 0
+"172 glcd.c
+[v _glcdMoveTo `(v  1 e 0 0 ]
+{
+[v _yX `uc  1 p 1 0 ]
+[v _yY `uc  1 p 1 1 ]
+"190
+} 0
+"654 wwv.c
+[v _wwvGetWeekDay `(uc  1 s 1 _wwvGetWeekDay ]
+{
+"655
+[v _r `i  1 a 2 0 ]
+"654
+[v _nMonth `i  1 p 2 0 ]
+[v _nDate `i  1 p 2 2 ]
+[v _nYear `i  1 p 2 4 ]
+"665
+} 2
+"95 rtc.c
+[v _rtcReadRam `(uc  1 e 1 0 ]
+{
+"96
+[v _y `uc  1 a 1 0 ]
+"95
+[v _yAddress `uc  1 p 1 0 ]
+"107
+} 1
+"227
+[v _rtcBCDToDec `(uc  1 e 1 0 ]
+{
+"228
+[v _yBin `uc  1 a 1 0 ]
+"227
+[v _yNum `uc  1 p 1 0 ]
+"234
+} 1
+"288 glcd.c
+[v _glcdDrawBitmap `(v  1 e 0 0 ]
+{
+"290
+[v _yBaseCol `uc  1 a 1 0 ]
+[v _yBaseSeg `uc  1 a 1 1 ]
+"289
+[v _yXAxis `uc  1 a 1 2 ]
+[v _yYAxis `uc  1 a 1 3 ]
+"288
+[v _pBMP `*.duc  1 p 2 0 ]
+[v _yWidth `uc  1 p 1 2 ]
+[v _yHeight `uc  1 p 1 3 ]
+"339
+} 4
+"69 spi.c
+[v _spiRead `(uc  1 e 1 0 ]
+{
+"71
+[v _yData `uc  1 a 1 0 ]
+"70
+[v _yShift `uc  1 a 1 1 ]
+"89
+} 2
+"177
+[v _spiChipDeselect `(v  1 e 0 0 ]
+{
+"180
+} 0
+"3 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+{
+"4
+[v _product `ui  1 a 2 0 ]
+"3
+[v _multiplier `ui  1 p 2 0 ]
+[v _multiplicand `ui  1 p 2 2 ]
+"13
+} 2
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+{
+"6
+[v _sign `uc  1 a 1 0 ]
+[v _counter `uc  1 a 1 1 ]
+"5
+[v _dividend `i  1 p 2 0 ]
+[v _divisor `i  1 p 2 2 ]
+"30
+} 2
+"5 C:\Program Files\HI-TECH Software\PICC-18\PRO\9.66\sources\awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+[v _sign `uc  1 a 1 1 ]
+"6
+[v _quotient `i  1 a 2 2 ]
+"5
+[v _dividend `i  1 p 2 0 ]
+[v _divisor `i  1 p 2 2 ]
+"37
+} 4
+"154 spi.c
+[v _spiChipSelect `(v  1 e 0 0 ]
+{
+"157
+} 0
+"110
+[v _spiWrite `(v  1 e 0 0 ]
+{
+"111
+[v _yShift `uc  1 a 1 0 ]
+"110
+[v _yByte `uc  1 p 1 0 ]
+"133
+} 1
+"211 glcd.c
+[v _glcdWriteChar `(v  1 e 0 0 ]
+{
+"213
+[v _pChar `*.duc  1 a 2 0 ]
+"212
+[v _i `ui  1 a 2 2 ]
+"211
+[v _yChar `uc  1 p 1 0 ]
+"241
+} 4
+"146
+[v _glcdSetCol `(v  1 e 0 0 ]
+{
+[v _yCol `uc  1 p 1 0 ]
+[v _ySeg `uc  1 p 1 1 ]
+"149
+} 0
+"121
+[v _glcdSetPage `(v  1 e 0 0 ]
+{
+[v _yPage `uc  1 p 1 0 ]
+[v _ySeg `uc  1 p 1 1 ]
+"124
+} 0
+"214 glbase.c
+[v _glbaseWriteData `(v  1 e 0 0 ]
+{
+[v _yData `uc  1 p 1 0 ]
+[v _yDFlag `uc  1 p 1 1 ]
+[v _yCS `uc  1 p 1 2 ]
+"230
+} 0
+"135
+[v _glbaseWaitForNonBusy `(v  1 e 0 0 ]
+{
+"136
+[v _yStatus `uc  1 a 1 0 ]
+"135
+[v _yCS `uc  1 p 1 0 ]
+"152
+} 1
+"78
+[v _glbaseEnableController `(v  1 e 0 0 ]
+{
+[v _yCS `uc  1 p 1 0 ]
+"85
+} 0
+"106
+[v _glbaseDisableController `(v  1 e 0 0 ]
+{
+[v _yCS `uc  1 p 1 0 ]
+"113
+} 0
+"383 main.c
+[v _DelayShort `(v  1 e 0 0 ]
+{
+"386
+} 0
+"528
+[v _GlobalInt `I(v  1 e 0 0 ]
+{
+"542
+} 0

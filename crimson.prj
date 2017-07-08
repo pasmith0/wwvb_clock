@@ -1,0 +1,34 @@
+<project version="Crimson Editor 3.60">
+	<localfile path="C:\SRC\wwvb2\bitmaps.h" />
+	<localfile path="C:\SRC\wwvb2\delay.h" />
+	<localfile path="C:\SRC\wwvb2\glbase.c" />
+	<localfile path="C:\SRC\wwvb2\glcd.c" />
+	<localfile path="C:\SRC\wwvb2\glcd.h" />
+	<localfile path="C:\SRC\wwvb2\main.c" />
+	<localfile path="C:\SRC\wwvb2\main.h" />
+	<localfile path="C:\SRC\wwvb2\rtc.c" />
+	<localfile path="C:\SRC\wwvb2\rtc.h" />
+	<localfile path="C:\SRC\wwvb2\spi.c" />
+	<localfile path="C:\SRC\wwvb2\spi.h" />
+	<localfile path="C:\SRC\wwvb2\types.h" />
+	<localfile path="C:\SRC\wwvb2\wwv.c" />
+	<localfile path="C:\SRC\wwvb2\wwv.h" />
+</project>
+
+<workspace version="Crimson Editor 3.60">
+	<localfile path="C:\SRC\wwvb2\bitmaps.h" linenum="1" placement="0:1:-1:-1:-4:-23:110:110:995:617" />
+	<localfile path="C:\SRC\wwvb2\delay.h" linenum="1" placement="0:1:-1:-1:-4:-23:132:132:1021:643" />
+	<localfile path="C:\SRC\wwvb2\glbase.c" linenum="1" placement="0:1:-1:-1:-4:-23:154:154:1043:665" />
+	<localfile path="C:\SRC\wwvb2\glcd.c" linenum="1" placement="0:1:-1:-1:-4:-23:176:176:1065:687" />
+	<localfile path="C:\SRC\wwvb2\glcd.h" linenum="1" placement="0:1:-1:-1:-4:-23:198:198:1087:709" />
+	<localfile path="C:\SRC\wwvb2\main.c" linenum="1" placement="0:1:-1:-1:-4:-23:220:220:1109:731" />
+	<localfile path="C:\SRC\wwvb2\main.h" linenum="1" placement="0:1:-1:-1:-4:-23:242:242:1131:753" />
+	<localfile path="C:\SRC\wwvb2\rtc.c" linenum="1" placement="0:1:-1:-1:-4:-23:0:0:889:511" />
+	<localfile path="C:\SRC\wwvb2\rtc.h" linenum="1" placement="0:1:-1:-1:-4:-23:22:22:911:533" />
+	<localfile path="C:\SRC\wwvb2\spi.c" linenum="1" placement="0:1:-1:-1:-4:-23:44:44:933:555" />
+	<localfile path="C:\SRC\wwvb2\spi.h" linenum="1" placement="0:1:-1:-1:-4:-23:66:66:955:577" />
+	<localfile path="C:\SRC\wwvb2\types.h" linenum="1" placement="0:1:-1:-1:-4:-23:88:88:977:599" />
+	<localfile path="C:\SRC\wwvb2\wwv.c" linenum="265" placement="0:1:-1:-1:-4:-23:110:110:999:621" />
+	<localfile path="C:\SRC\wwvb2\wwv.h" linenum="1" placement="2:3:-1:-1:-4:-23:132:132:1021:643" />
+</workspace>
+
